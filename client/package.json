@@ -1,0 +1,55 @@
+{
+  "name": "testing-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "lodash": "4.17.21",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hooks": "^1.0.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.1",
+    "rxjs": "6.6.7",
+    "react-data-tables": "github:opaltitan/react-data-tables#main",
+    "simple-react-buttons": "github:opaltitan/simple-react-buttons#main",
+    "simple-react-expander": "github:opaltitan/simple-react-expander#master",
+    "simple-react-modal": "github:opaltitan/simple-react-modal#main",
+    "simple-text-display-formatter": "github:opaltitan/simple-text-display-formatter",
+    "typescript": "4.3.5",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "tsc && react-scripts start",
+    "build": "tsc",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "17.0.18",
+    "@types/react-dom": "17.0.9",
+    "@types/react-router-dom": "5.1.8",
+    "@types/lodash": "4.14.172",
+    "typescript": "4.3.5"
+  }
+}

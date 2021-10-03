@@ -1,0 +1,449 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav > ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+div.footer {
+  height: 50px;
+}
+
+header.navbar {
+  height: 100px;
+}
+
+.hide-modal {
+  display: none;
+}
+
+header.navbar > nav > ul {
+  list-style: none;
+  width: 100%;
+  margin: auto;
+  padding-left: 0px;
+}
+
+header.navbar > nav > ul > li.nav_item {
+  display: inline-block;
+  margin: auto;
+  width: 25%;
+}
+
+header.navbar > nav > ul > li.nav_item > a {
+  text-decoration: none;
+}
+
+div.portfolios, div.watchlists {
+  margin-top: 15px 0px 15px 0px;
+  padding: 5px 5px 5px 5px;
+}
+
+div.portfolios > div.portfolioList {
+  margin: 10px 5x 10px 5px;
+}
+
+div.watchlist-details {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+div.watchlist-details li.stock-snapshot-list-item {
+  display: inline-block;
+  width: 80%;
+  padding: 5px 0px 5px 0px;
+}
+
+div.watchlist-details li.stock-snapshot-list-item span.snapshot_date.header {
+  margin-left: 30px;
+}
+
+div.watchlist-details li.stock-snapshot-list-item span.snapshot_date {
+  width: 23%;
+  display: inline-block;
+}
+
+div.watchlist-details li.stock-snapshot-list-item div.view-stock-snapshot {
+  width: 10%;
+  display: inline-block;
+}
+
+/* div.watchlist-details li.stock-snapshot-list-item span.stock_snapshot_average_rating.header {
+  margin-left: 30px;
+  width: 23%;
+  display: inline-block;
+} */
+
+div.watchlist-details li.stock-snapshot-list-item span.stock_snapshot_average_rating {
+  width: 18%;
+  display: inline-block;
+}
+
+div.watchlist-details li.stock-snapshot-list-item span.stock_snapshot_most_recent_comment_date {
+  width: 35%;
+  display: inline-block;
+}
+
+div.watchlist-details .expander .expander-body {
+  padding: 20px 20px 20px 20px;
+}
+
+div.watchlist-details > ul.watchlist-stock-list > div.expander > div.expander-header {
+  display: inline-block;
+  width: 100%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list {
+  width: 100%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list li.watchlist-stock-list-item {
+  display: inline-block;
+  width: 90%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list li.watchlist-stock-list-item > span.ticker.header {
+  display: inline-block;
+  width: 7%;
+  margin-left: 30px;
+}
+
+div.watchlist-details > ul.watchlist-stock-list li.watchlist-stock-list-item > span.ticker {
+  display: inline-block;
+  width: 7%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list li.watchlist-stock-list-item > div.view-stock {
+  display: inline-block;
+  width: 7%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list li.watchlist-stock-list-item > span.stockName {
+  display: inline-block;
+  width: 27%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list li.watchlist-stock-list-item > span.stockAverageRating {
+  display: inline-block;
+  width: 22%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list li.watchlist-stock-list-item > span.stockMostRecentCommentDate {
+  display: inline-block;
+  width: 26%;
+}
+
+div.watchlist-details > ul.watchlist-stock-list  li.watchlist-stock-list-item > div.remove {
+  display: inline-block;
+  width: 5%;
+}
+
+div.portfolios > div.portfolioListItem > div.section_title,
+div.watchlists > div.watchlistListItem > div.section_title {
+  display: inline-block;
+  width: 50%;
+}
+
+div.portfolios > div.portfolioListItem > div.section_title > h3,
+div.watchlists > div.watchlistListItem > div.section_title > h3 {
+  display: inline-block;
+}
+
+div.portfolios > div.portfolioListItem > div.horizontal-button-group,
+div.watchlists > div.watchlistListItem > div.horizontal-button-group {
+  display: inline-block;
+}
+
+div.search-page > .search-results {
+  text-align: left;
+  margin-left: 50px;
+}
+
+div.internal-stock-search > .search-results {
+  text-align: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+div.internal-stock-search > .search-results > .search-result-item > span.stockName {
+  width: 70%;
+}
+
+.search-results > .search-result-item {
+  display: inline-block;
+  width: 100%;
+}
+
+.search-results > .search-result-item .horizontal-button-group {
+  display: inline-block;
+  width: 10%;
+  padding-right: 20px;
+}
+
+.search-results > .search-result-item > span.ticker {
+  display: inline-block;
+  width: 8%;
+}
+
+.search-results > .search-result-item > span.stockName {
+  display: inline-block;
+  width: 33%;
+}
+
+.search-results > .search-result-item > span.stockAverageRating {
+  display: inline-block;
+  width: 20%;
+}
+
+.search-results > .search-result-item > span.stockMostRecentCommentDate {
+  display: inline-block;
+  width: 24%;
+}
+
+div.stock-details {
+  padding: 20px 20px 20px 20px; 
+}
+
+div.stock-details > div.description {
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.label {
+  display: block;
+  width: 100px;
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.expander-header-icon-container {
+  display: inline-block;
+  width: 30px;
+}
+
+.expander-header-icon {
+  display: inline-block;
+  width: 18px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.stock-details-overview-expander-header {
+  display: inline;
+}
+
+.stock-details-overview-expander-header > .title {
+  display: inline;
+}
+
+.stock-details-overview-expander-header > .title > h3 {
+  display: inline;
+}
+
+div.stock-snapshot-details > div.expander {
+  display: inline-block;
+  width: 90%;
+}
+
+div.stock-snapshot-details > div.expander > div.expander-header {
+  display: inline-block;
+  width: 100%;
+}
+
+div.stock-snapshot-details > div.expander > div.expander-header > div.expander-header-icon-container {
+  display: inline-block;
+}
+
+div.stock-snapshot-details > div.expander > div.expander-header > div.stock-movement-expander-header,
+div.stock-snapshot-details > div.expander > div.expander-header > div.financial-ratio-expander-header,
+div.stock-snapshot-details > div.expander > div.expander-header > div.financial-statements-expander-header,
+div.stock-snapshot-details > div.expander > div.expander-header > div.comments-expander-header {
+  display: inline-block;
+}
+
+div.stock-snapshot-details div.title h3 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+div.watchlist-details div.stock-snapshot-details div.expander-body {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+div.stock-snapshot-details div.stock-snapshot-comment div.commentor-container {
+  width: 40%;
+  display: inline-block;
+}
+
+div.stock-snapshot-details div.stock-snapshot-comment div.rating-container {
+  width: 40%;
+  display: inline-block;
+}
+
+div.stock-snapshot-comment {
+  text-align: left;
+}
+
+div.stock-snapshot-comment > div.comment-text-container > textarea {
+  width: 100%;
+}
+
+div.dataTableColumn {
+  display: inline-block;
+  min-width: 130px;
+}
+
+div.dataTableColumn.lineItemHeader, div.dataRowLabel, div.dataTableColumn.headerRow.empty {
+  min-width: 200px;
+}
+
+div.dataTableColumn div.dataTableRow, div.dataTableColumn div.dataTableRow span {
+  min-width: 100%;
+}
+
+div.stock-snapshot-comments {
+  padding: 20px 20px 20px 20px;
+}
+
+div.financial-statement-data-container {
+  display: inline-block;
+  width: 75%;
+}
+
+div.financial-statement {
+  display: flex;
+}
+
+div.financial-statement-data {
+  display: flex;
+  overflow-x: scroll;
+  width: auto;
+}
+
+div.dataTableColumn div.dataTableRow span {
+  overflow: hidden;
+  max-width: 200px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+div.dataTableRow.empty {
+  height: 21px;
+  display: block;
+}
+
+div.dataTableColumn.lineItemHeader {
+  font-weight: 600;
+  text-align: left;
+}
+
+div.financial-statement div.dataTableColumn.lineItemData div.headerRow,
+div.financial-statement div.dataTableRow.grossProfit,
+div.financial-statement div.dataTableRow.operatingIncome,
+div.financial-statement div.dataTableRow.netIncome,
+div.financial-statement div.dataTableRow.ebitda {
+  font-weight: 600;
+}
+
+div.stock-snapshot-comments-information {
+  width: 100%;
+  display: block;
+}
+
+.stock-snapshot-details .expander-header {
+  display: inline;
+}
+
+.stock-snapshot-details .expander-header > .title {
+  display: inline;
+}
+
+.stock-snapshot-details .expander-header > .title > h3 {
+  display: inline;
+}
+
+.stock-movement-expander-header, .financial-ratio-expander-header, .financial-statements-expander-header, .comments-expander-header,
+.stock-movement-expander-header .title, .financial-ratio-expander-header .title, .financial-statements-expander-header .title, .comments-expander-header .title,
+.stock-movement-expander-header .title h3, .financial-ratio-expander-header .title h3, .financial-statements-expander-header .title h3, .comments-expander-header .title h3 {
+  display: inline;
+}
+
+.stock-snapshot-details .expander {
+  padding: 20px 20px 20px 20px;
+  text-align: left;
+}
+
+.stock-financial-statement-information .expander {
+  padding: 20px 20px 20px 20px;
+  text-align: left;
+}
+
+.financial-statement-expander-header, .financial-statement-expander-header .title, .financial-statement-expander-header .title h3 {
+  display: inline;
+}
+
+div.tableHeaderRowContainer {
+  display: inline-block;
+  width: 75%;
+}
+
+div.dataTableHeaderRow, div.dataTableDataRow {
+  display: flex;
+}
+
+div.financial-ratio-body {
+  /* width: 100%; */
+
+  /* display: flex; */
+  overflow-x: scroll;
+  width: auto;
+
+  display: block;
+  padding: 20px 20px 20px 20px;
+}
+
+div.financial-ratio-body-container {
+  width: 100%;
+}
+
+div.dataRowLabel {
+  min-width: 200px;
+}
+
+div.dashboard > div.portfolios > div.portfolioListItem > div.section_title,
+div.dashboard > div.watchlists > div.watchlistListItem > div.section_title {
+  text-align: left;
+}
+
+div.dashboard-group-list-item-buttons > button {
+  margin-right: 20px;
+}
