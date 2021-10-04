@@ -6,7 +6,6 @@ import { Modal } from 'simple-react-modal';
 import { Http } from '../models/http.d';
 import { Events } from '../models/events.d';
 import { Enums } from '../models/enum.d';
-// import { ID } from '../models/type';
 
 interface PageMeta {
   name: string;

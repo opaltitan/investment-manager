@@ -11,9 +11,7 @@ import { ID } from '../models/type';
 interface PageMeta {
   name: string;
   label: string;
-  // buttonDisplayText: string;
   httpItem: Http.HttpCallMapItem;
-  // eventType: Enums.SYNTHETIC_EVENTS;
   eventType: string;
 };
 
@@ -21,14 +19,12 @@ const pages: { [x: string]: PageMeta } = {
   [Enums.PAGE_TYPE.DELETE_PORTFOLIO]: {
     name: 'portfolio',
     label: 'Portfolio',
-    // buttonDisplayText: 'Portfolio',
     httpItem: Http.httpCallMap.portfolio.delete,
     eventType: Enums.SYNTHETIC_EVENTS.PORTFOLIO_UPDATE
   },
   [Enums.PAGE_TYPE.DELETE_WATCHLIST]: {
     name: 'watchlist',
     label: 'Watchlist',
-    // buttonDisplayText: 'Watchlist',
     httpItem: Http.httpCallMap.watchlist.delete,
     eventType: Enums.SYNTHETIC_EVENTS.WATCHLIST_UPDATE
   },

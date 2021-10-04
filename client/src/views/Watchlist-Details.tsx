@@ -86,9 +86,7 @@ export const WatchlistDetails = (params: Input.WatchlistDetails.Params): JSX.Ele
     <div ref={watchlistDetailsRef}
          className="watchlist-details">
       <Buttons.Component params={addStockButtonData} />
-      {/* <InternalStockSearch  buttonDisplayText="Add Stock"
-                            selectionCallback={addStock} />*/}
-     {stockList}
+      {stockList}
     </div>
   );
 };

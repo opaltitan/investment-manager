@@ -75,13 +75,6 @@ const lineItemAmount = (finStat: Data.FinancialStatement, lineItemType: string):
   return foundLineItem ? foundLineItem.amount : 0;
 };
 
-// const lineItemAmountLookup = (quarterDate: Date, lineItem: string, data: Array<Data.FinancialStatement>): number => {
-//   return lineItemAmountLookup(data[currentQuarterArrayIndex(quarterDate, data)], lineItem);
-//   const currentQuarterRevenue: number = lineItemFinder(data[currentQuarterArrayIndex(quarterDate, data)], lineItemNames.totalRevenue);
-//   const firstPriorQuarterRevenue: number = lineItemFinder(data[currentQuarterArrayIndex(quarterDate, data) + 1], lineItemNames.totalRevenue);
-
-//   return (currentQuarterRevenue - firstPriorQuarterRevenue) / firstPriorQuarterRevenue;
-// };
 
 const ratioCalculations: { [x: string]: (y: DualAxis.Field, data: Array<Data.FinancialStatement>) => number } = {
   [ratioNames.quarterlyRevenueGrowth]: (y, data) => {

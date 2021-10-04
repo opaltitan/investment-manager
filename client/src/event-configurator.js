@@ -5,14 +5,11 @@ import { forOwn } from 'lodash';
 
 export const syntheticEvents = {
   watchlistUpdate: 'watchlistUpdate',
-  // watchlistDelete: 'watchlistDelete',
   watchlistStockInsert: 'watchlistStockInsert',
   watchlistStockDelete: 'watchlistStockDelete',
   portfolioUpdate: 'portfolioUpdate',
-  // portfolioDelete: 'portfolioDelete',
   portfolioTransactionInsert: 'portfolioTransactionInsert',
   portfolioTransactionDelete: 'portfolioTransactionDelete',
-  // stockUpdate: new SyntheticEvent('stockUpdate', new Event('stockUpdate')),
   stockSnapshotInsert: 'stockSnapshotInsert',
   stockSnapshotUpdate: 'stockSnapshotUpdate',
   stockSnapshotDelete: 'stockSnapshotDelete',

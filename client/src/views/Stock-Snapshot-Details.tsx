@@ -1,8 +1,6 @@
 import { useState, useRef } from 'react';
-// import { take } from 'rxjs/operators';
 import { Enums } from '../models/enum.d';
 import { Effects } from '../models/effects.d';
-// import { Http } from '../models/http.d';
 import { Buttons } from 'simple-react-buttons';
 import { Modal } from 'simple-react-modal';
 import { Expander } from 'simple-react-expander';

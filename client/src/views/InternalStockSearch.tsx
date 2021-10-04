@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import { Data } from '../models/data';
 import { Buttons } from 'simple-react-buttons';
 import { Modal } from 'simple-react-modal';
-// import { DataTable } from '../models/inputs/data_table.d'
 import { SingleAxis } from 'react-data-tables';
 import { InternalStockSearchConfig } from '../models/data_table.d';
 import { Events } from '../models/events.d';
@@ -58,8 +57,6 @@ export const InternalStockSearch = (): JSX.Element => {
     ? <SingleAxis.Component data={modifiedSearchResults}
                             config={InternalStockSearchConfig} />
     : null;
-
-  // const displayModalTrigger = (displayStateSetter: (a: boolean) => void) => { displayStateSetter(true); };
 
   const closeButtonData: Buttons.Params = {
     parentClass: 'internal-stock-search-close-buttons',
