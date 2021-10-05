@@ -1,8 +1,7 @@
-import { Enums } from './enum.d';
-import { SingleAxis, DataTableEnums } from 'react-data-tables';
+import { SingleAxis } from 'react-data-tables';
 import { Events } from './events.d';
-import { Data } from './data.d';
-import { ID } from './type';
+import { Enums } from '../models/enum.d';
+import { ID } from '../models/type';
 
 export namespace DashboardConfig {
   export const PortfolioList: (history: any) => SingleAxis.Config = (history) => {

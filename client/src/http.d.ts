@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Enums } from './enum.d';
+import { Enums } from './models/enum.d';
 
 const headerObj: { [x: string]: JSON } = {
   headers: {
@@ -20,20 +20,11 @@ interface HttpParamsInput {
   additionalParams?: HttpAdditionalParams;
 }
 
-// const httpTypeMapping: { [x: Enums.HTTP_CALL_TYPE]: string } = {
-//   [Enums.HTTP_CALL_TYPE.GET]: 'GET',
-//   [Enums.HTTP_CALL_TYPE.POST]: 'POST',
-//   [Enums.HTTP_CALL_TYPE.PUT]: 'PUT',
-//   [Enums.HTTP_CALL_TYPE.DELETE]: 'DELETE',
-// };
-
 const headerBuilder = (type: string, body?: Object) => {
-  console.log(type);
   let builtHeader = {
     ...headerObj,
     method: type
   };
-  console.log(builtHeader);
   if (body) {
     Object.assign(
       builtHeader,
@@ -118,16 +109,13 @@ export namespace Http {
     }
   };
 
-  export const execute = (type: string, url: string, body?: Object) => {
-    console.log(url);
-    console.log(body);
+  export const execute = (type: string, url: string, body?: Object | null): Observable<any> => {
     return Observable.create(observer =>
       fetch(
         `${baseUrl}${url}`,
         headerBuilder(type, body)
       ).then(res => res.json())
       .then(data => {
-        console.log(data);
         observer.next(data);
         observer.complete();
       })

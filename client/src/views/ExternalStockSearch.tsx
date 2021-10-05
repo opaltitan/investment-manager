@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
-import { useDebounce } from '../models/debouncer';
+import { useDebounce } from '../extensions/effects';
 import { Enums } from '../models/enum.d';
 import { Title } from './Common';
-import { Http } from '../models/http.d';
-import { Events } from '../models/events.d';
-import { Effects } from '../models/effects.d';
+import { Http } from '../http.d';
+import { Events } from '../config/events.d';
+import { DataLoad } from '../config/data-load.d';
 import { take } from 'rxjs/operators';
 import { Buttons } from 'simple-react-buttons';
 import { ID } from '../models/type';
@@ -64,7 +64,7 @@ const StockAddSuccess = (): JSX.Element => {
   };
 
   Events.CreateEventListeners(Enums.PAGE_TYPE.EXTERNAL_STOCK_SEARCH_SUCCESS_MODAL, modalRef, eventListenerParamObj);
-  const stockData: Data.Stock = Effects.SingleStock(idState);
+  const stockData: Data.Stock = DataLoad.SingleStock(idState);
 
   const buttonData: Buttons.Params = {
     parentClass: 'horizontal-button-group',
@@ -139,7 +139,7 @@ export const ExternalStockSearch = (): JSX.Element => {
 
   const updateTicker = (e: React.ChangeEvent<HTMLInputElement>) => setTickerState(e.target.value);
   const debouncedTicker: string = useDebounce(tickerState, 3000);
-  const searchListData: Array<Data.StockSearch> = Effects.StockSearchState(debouncedTicker);
+  const searchListData: Array<Data.StockSearch> = DataLoad.ExternalStockSearch(debouncedTicker);
 
   const searchListItems: Array<JSX.Element> | null = searchListData
     ? searchListData.map((item) =>

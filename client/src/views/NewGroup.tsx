@@ -1,10 +1,10 @@
 import { useState, useRef } from 'react';
 import { take } from 'rxjs/operators';
-import { Input } from '../models/component';
+import { Input } from '../models/component-input';
 import { Buttons } from 'simple-react-buttons';
 import { Modal } from 'simple-react-modal';
-import { Http } from '../models/http.d';
-import { Events } from '../models/events.d';
+import { Http } from '../http.d';
+import { Events } from '../config/events.d';
 import { Enums } from '../models/enum.d';
 
 interface PageMeta {

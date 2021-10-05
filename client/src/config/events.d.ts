@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { BehaviorSubject } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { forOwn } from 'lodash';
-import { Enums } from './enum.d';
-import { ID } from './type';
+import { Enums } from '../models/enum.d';
+import { ID } from '../models/type';
 
 const eventHandlers: {
   [x: string]: (
@@ -215,12 +215,9 @@ export namespace Events {
         const composedHandlerFunc = (e) => {
           eventItem.handlerFunc(e && e.detail && e.detail.text() ? e.detail.text() : null, actionParams)
         };
-        // console.log(eventItem);
-        // console.log(`event handler ${eventItem.eventType} added`);
         currentElement.addEventListener(eventItem.eventType, composedHandlerFunc);
 
         return () => {
-          // console.log(`event handler ${eventItem.eventType} removed`);
           currentElement.removeEventListener(eventItem.eventType, composedHandlerFunc);
         };
       }
@@ -229,7 +226,6 @@ export namespace Events {
 
   export const CreateEventListeners = (page: Enums.PAGE_TYPE, element: RefObject<HTMLDivElement>, actionParams: ActionParams) => {
     const eventConfig: { [x: string]: EventItem } = eventListenerItemConfig[page];
-    // console.log(eventConfig);
     forOwn(eventConfig, (item, _key) => {
       item.setElement(element);
       item.element

@@ -3,9 +3,9 @@ import { Data } from '../models/data';
 import { Buttons } from 'simple-react-buttons';
 import { Modal } from 'simple-react-modal';
 import { SingleAxis } from 'react-data-tables';
-import { InternalStockSearchConfig } from '../models/data_table.d';
-import { Events } from '../models/events.d';
-import { Effects } from '../models/effects.d';
+import { InternalStockSearchConfig } from '../config/data_table.d';
+import { Events } from '../config/events.d';
+import { DataLoad } from '../config/data-load.d';
 import { Enums } from '../models/enum.d';
 import { ID } from '../models/type';
 
@@ -28,7 +28,7 @@ export const InternalStockSearch = (): JSX.Element => {
 
   const updateSearchTerm = (e: any): void => setSearchTermState(e.target.value);
 
-  const searchResults: Array<Data.Stock> = Effects.InternalStockSearch(searchTermState);
+  const searchResults: Array<Data.Stock> = DataLoad.InternalStockSearch(searchTermState);
 
   let selectStock = (id: ID): void => {
     stockAdderCallback.selectorCallback(id);

@@ -1,13 +1,13 @@
 import { useState, useRef } from 'react';
 import { take } from 'rxjs/operators';
 import { Data } from '../models/data';
-import { Input } from '../models/component';
+import { Input } from '../models/component-input';
 import { Buttons } from 'simple-react-buttons';
-import { WatchlistDetailsConfig } from '../models/data_table.d';
-import { Events } from '../models/events.d';
-import { Effects } from '../models/effects.d';
+import { WatchlistDetailsConfig } from '../config/data_table.d';
+import { Events } from '../config/events.d';
+import { DataLoad } from '../config/data-load.d';
 import { Enums } from '../models/enum.d';
-import { Http } from '../models/http.d';
+import { Http } from '../http.d';
 import { ID } from '../models/type';
 import { SingleAxis } from 'react-data-tables';
 
@@ -63,7 +63,7 @@ export const WatchlistDetails = (params: Input.WatchlistDetails.Params): JSX.Ele
 
   Events.CreateEventListeners(Enums.PAGE_TYPE.WATCHLIST_DETAILS, watchlistDetailsRef, eventListenerParamObj);
 
-  const watchlistData: Data.Watchlist = Effects.SingleWatchlist(params.watchlistId, refreshTriggerState);
+  const watchlistData: Data.Watchlist = DataLoad.SingleWatchlist(params.watchlistId, refreshTriggerState);
 
   console.log(watchlistData);
   let stockList: JSX.Element | null = watchlistData && watchlistData.stocks && watchlistData.stocks.length

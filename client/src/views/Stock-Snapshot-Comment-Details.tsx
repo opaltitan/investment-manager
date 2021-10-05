@@ -1,11 +1,11 @@
 import { get } from 'lodash';
 import { useState, useRef } from 'react';
 import { Buttons } from 'simple-react-buttons';
-import { Http } from '../models/http.d';
+import { Http } from '../http.d';
 import { Data } from '../models/data.d';
 import { take } from 'rxjs/operators';
 import { Enums } from '../models/enum.d';
-import { Events } from '../models/events.d';
+import { Events } from '../config/events.d';
 import { ID } from '../models/type';
 
 const decimal = '.';

@@ -2,11 +2,11 @@ import { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Buttons } from 'simple-react-buttons';
 import { Data } from '../models/data';
-import { Input } from '../models/component';
+import { Input } from '../models/component-input';
 import { SingleAxis } from 'react-data-tables';
-import { DashboardConfig } from '../models/data_table.d';
-import { Events } from '../models/events.d';
-import { Effects } from '../models/effects.d';
+import { DashboardConfig } from '../config/data_table.d';
+import { Events } from '../config/events.d';
+import { DataLoad } from '../config/data-load.d';
 import { Enums } from '../models/enum.d';
 
 interface PageMeta {
@@ -24,7 +24,7 @@ const pages: { [x: string]: PageMeta } = {
     className: 'portfolios',
     buttonDisplayText: 'Portfolio',
     eventType: Enums.SYNTHETIC_EVENTS.SHOW_PORTFOLIO_DELETE_MODAL,
-    dataPullEffect: Effects.AllPortfolios,
+    dataPullEffect: DataLoad.AllPortfolios,
     configuration: DashboardConfig.PortfolioList
   },
   [Enums.PAGE_TYPE.WATCHLIST_LIST]: {
@@ -32,7 +32,7 @@ const pages: { [x: string]: PageMeta } = {
     className: 'portfolios',
     buttonDisplayText: 'Watchlist',
     eventType: Enums.SYNTHETIC_EVENTS.SHOW_WATCHLIST_DELETE_MODAL,
-    dataPullEffect: Effects.AllWatchlists,
+    dataPullEffect: DataLoad.AllWatchlists,
     configuration: DashboardConfig.WatchlistList
   },
 };

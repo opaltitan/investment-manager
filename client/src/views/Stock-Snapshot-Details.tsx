@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
 import { Enums } from '../models/enum.d';
-import { Effects } from '../models/effects.d';
+import { DataLoad } from '../config/data-load.d';
 import { Buttons } from 'simple-react-buttons';
 import { Modal } from 'simple-react-modal';
 import { Expander } from 'simple-react-expander';
 import { Title } from './Common';
-import { Events } from '../models/events.d';
+import { Events } from '../config/events.d';
 import { ID } from '../models/type';
 import { Data } from '../models/data';
 import { StockFinancialRatioDetails } from './Stock-Financial-Ratio-Details';
@@ -26,7 +26,7 @@ export const StockSnapshotDetails = (): JSX.Element => {
   };
 
   Events.CreateEventListeners(Enums.PAGE_TYPE.STOCK_SNAPSHOT_DETAILS, modalRef, eventListenerParamObj);
-  const stockSnapshotData: Data.SnapshotDisplay = Effects.SingleSnapshot(idState, refreshTriggerState);
+  const stockSnapshotData: Data.SnapshotDisplay = DataLoad.SingleSnapshot(idState, refreshTriggerState);
 
   const buttonData: Buttons.Params = {
     parentClass: 'horizontal-button-group',

@@ -153,10 +153,6 @@ export namespace Input {
     }
   }
 
-  // namespace ExternalStockSearch {
-
-  // }
-
   export namespace NewGroupModal {
     export interface Params {
       pageType: Enums.PAGE_TYPE;
